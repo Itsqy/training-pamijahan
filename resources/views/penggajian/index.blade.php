@@ -1,5 +1,3 @@
-Index penggajian
-
 @extends('layouts.template')
 
 @section('tab')
