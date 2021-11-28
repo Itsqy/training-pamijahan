@@ -39,7 +39,8 @@ Index penggajian
                                             <a href="/create-gaji/{{ $row->id }}" class="btn btn-primary"><i
                                                     class="fa fa-exchange-alt"></i>
                                                 Penggajian</a>
-                                            <a href="" class="btn btn-info"><i class="fa fa-eye"></i> Info</a>
+                                            <a href="/detail/{{ $row->id }}" class="btn btn-info"><i
+                                                    class="fa fa-eye"></i> Info</a>
                                         </td>
                                     </tr>
                                 @endforeach

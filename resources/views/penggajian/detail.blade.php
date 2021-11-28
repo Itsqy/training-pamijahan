@@ -24,16 +24,16 @@
                         <table class="table table-hover">
                             <tr>
                                 <th>nama penggajian : </th>
-                                <td>{{ $penggajian->nama_penggajian }}</td>
+                                <td>{{ $karyawan->nama_karyawan }}</td>
                             </tr>
                             <tr>
                                 <th>jabatan penggajian : </th>
-                                <td> {{ $penggajian->jabatan->nama_jabatan }}</td>
+                                <td> {{ $karyawan->jabatan->nama_jabatan }}</td>
                             </tr>
 
                             <tr>
                                 <th>status : </th>
-                                <td> {{ $penggajian->status }}</td>
+                                <td> {{ $karyawan->status }}</td>
                             </tr>
                         </table>
                     </div>
@@ -44,16 +44,18 @@
                         <table class="table table-hover">
                             <tr>
                                 <th>Periode Gaji</th>
-                                <th>Jumlah gaji</th>
+                                <th>total tunjangan</th>
                                 <th>Jumlah Potongan</th>
                                 <th>Total Gaji</th>
                                 <th></th>
                             </tr>
-                            @foreach (@penggajian as $row)
+                            @foreach ($penggajian as $row)
 
                                 <tr>
                                     <td>{{ $row->bulan_gajian }}/{{ $row->tahun_gajian }}</td>
                                     <td> Rp. {{ number_format($row->total_tunjangan) }}</td>
+                                    <td> Rp. {{ number_format($row->potongan) }}</td>
+                                    <td> Rp. {{ number_format($row->total_gajian) }}</td>
                                     <td></td>
                                     <td></td>
                                 </tr>
